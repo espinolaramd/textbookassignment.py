@@ -6,6 +6,5 @@ class person():
         self.age = age
 
     def description(self):
-        author = (f'{self.first+self.last+self.age}')
+        author = (f"This person is called {self.first + self.last} and is {self.age} years of age.")
         return author
-

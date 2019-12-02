@@ -1,15 +1,14 @@
-from textbookprogramm import person
-
+from textbookprogram import person
 
 
 class textbook():
-    def __init__(self,title,first, last, age,edition,ISBN_number,publisher,year_publisher,quantity,price):
-        self.title= title
+    def __init__(self,title,first, last, age,edition,ISBN,publisher,year_published,quantity,price):
+        self.title = title
         self.author = person(first, last, age)
         self.edition = edition
-        self.isbn= ISBN_number
+        self.isbn= ISBN
         self.publisher= publisher
-        self.year = year_publisher
+        self.year = year_published
         self.quantity = quantity
         self.price = price
 
@@ -24,11 +23,8 @@ class textbook():
        else:
            return 1
 
-    def reorder(self):
+    def low_inventory(self):
         if self.quantity <= 5:
             return "Please reorder"
-
         else:
             return "Inventory level is adequate"
-
-
